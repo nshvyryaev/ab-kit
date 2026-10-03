@@ -1,0 +1,29 @@
+{
+  "name": "ab-kit",
+  "version": "0.1.0",
+  "description": "Простые A/B-эксперименты: закреплённое назначение, подменяемое хранилище, ручка, клиент, сравнение долей. Без зависимостей.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "exports": {
+    "./core": "./js/src/core/index.mjs",
+    "./server": "./js/src/server/index.mjs",
+    "./browser": {
+      "types": "./js/src/browser/index.d.ts",
+      "default": "./js/src/browser/index.mjs"
+    },
+    "./store/sqlite": "./js/src/store/sqlite.mjs",
+    "./store/memory": "./js/src/store/memory.mjs",
+    "./store/contract": "./js/src/store/contract.mjs",
+    "./stats": "./js/src/stats/index.mjs"
+  },
+  "files": [
+    "js/src"
+  ],
+  "scripts": {
+    "test": "node --test \"js/tests/*.test.mjs\"",
+    "vectors": "node js/scripts/vectors.mjs",
+    "size": "node js/scripts/size.mjs"
+  }
+}
