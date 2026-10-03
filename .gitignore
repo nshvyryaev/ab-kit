@@ -1,0 +1,4 @@
+node_modules/
+tmp/
+*.sqlite
+.claude/settings.local.json
